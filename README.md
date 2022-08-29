@@ -1,4 +1,4 @@
-# API Weather Test
+# Coin Counter
 
 #### (Brief Description of Application)
 
