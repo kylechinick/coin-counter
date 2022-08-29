@@ -21,14 +21,44 @@ function amountTocoins(amount, coins) {
 }
 console.log(amountTocoins(499, [25, 10, 5, 1]));
 
-function counter(coinsArray) {
-  const coinsTally = coinsArray.reduce(function (coinsFinal, coinsArray) {
-    coinsFinal[coinsArray] = (coinsFinal[coinsArray] || 0) + 1;
-    return coinsFinal;
-  });
+// function howManyQuarters(array, coinType) {
+//   const filteredArray = array.filter(coinType => coinType).length;
+//   return filteredArray;
+// }
+
+function superCoinCounterThing(coinType) {
+  return amountTocoins(499, [25, 10, 5, 1]).filter(coin => coin == coinType)
+    .length;
 }
 
-counter(amountTocoins(499, [25, 10, 5, 1]));
+console.log(superCoinCounterThing(1));
+
+// const howManyQuarters = amountTocoins(499, [25, 10, 5, 1]).filter(coinType => coinType == 25).length;
+// // console.log("howManyQuarters: " + howManyQuarters);
+// howManyQuarters();
+// const howManyDimes = amountTocoins(499, [25, 10, 5, 1]).filter(coinType => coinType == 10).length;
+// console.log("howManyDimes: " + howManyDimes);
+// const howManyNickels = amountTocoins(499, [25, 10, 5, 1]).filter(coinType => coinType == 5).length;
+// console.log("howManyNickels: " + howManyNickels);
+// const howManyPennies = amountTocoins(499, [25, 10, 5, 1]).filter(coinType => coinType == 1).length;
+// console.log("howManyPennies: " + howManyPennies);
+
+// amountTocoins = [25, 25, 25, 25, 25, 25, 10, 10, 10, 5, 1]
+// console.log(
+//   'howManyQuarters(): ' +
+//     howManyQuarters(amountTocoins(499, [25, 10, 5, 1]), 17)
+// );
+
+// const result = words.filter(word => word.length > 6);
+
+// function counter(coinsArray) {
+//   const coinsTally = coinsArray.reduce(function (coinsFinal, coinsArray) {
+//     coinsFinal[coinsArray] = (coinsFinal[coinsArray] || 0) + 1;
+//     return coinsFinal;
+//   });
+// }
+
+// counter(amountTocoins(499, [25, 10, 5, 1]));
 
 // > toDos
 // ["hike", "go out to eat", "swim", "play games", "hike", "cook meals", "sleep", "swim", "play games", "hike", "swim", "play games"]
