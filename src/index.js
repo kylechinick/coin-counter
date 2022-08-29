@@ -21,14 +21,14 @@ function amountTocoins(amount, coins) {
 }
 console.log(amountTocoins(499, [25, 10, 5, 1]));
 
-// function counter(coinsArray) {
-//   const coinsTally = coinsArray.reduce(function (coinsFinal, coinsArray) {
-//     coinsFinal[coinsArray] = (coinsFinal[coinsArray] || 0) + 1;
-//     return coinsFinal;
-//   });
-// }
+function counter(coinsArray) {
+  const coinsTally = coinsArray.reduce(function (coinsFinal, coinsArray) {
+    coinsFinal[coinsArray] = (coinsFinal[coinsArray] || 0) + 1;
+    return coinsFinal;
+  });
+}
 
-// counter(amountTocoins(499, [25, 10, 5, 1]));
+counter(amountTocoins(499, [25, 10, 5, 1]));
 
 // > toDos
 // ["hike", "go out to eat", "swim", "play games", "hike", "cook meals", "sleep", "swim", "play games", "hike", "swim", "play games"]
